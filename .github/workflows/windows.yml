@@ -1,14 +1,1 @@
-name: Build Windows Exe
-on: [push]
-jobs:
-  build:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.1
-      - name: Build with vcpkg and MSBuild
-        run: |
-          git clone https://github.com/microsoft/vcpkg
-          .\vcpkg\bootstrap-vcpkg.bat
-          .\vcpkg\vcpkg install glfw3:x64-windows
+
